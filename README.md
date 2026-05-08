@@ -56,7 +56,7 @@ The Windows virtual machine disk was acquired from the Proxmox hypervisor using 
 ## Acquisition Command
 
 ```bash
-dcfldd if=/dev/pve/vm-101-disk-0 of=windows.dd hash=sha256 hashlog=hash.txt
+dcfldd if=/dev/pve/vm-101-disk-0 of=windows2.dd hash=sha256 hashlog=forensic.txt
 ```
 
 ---

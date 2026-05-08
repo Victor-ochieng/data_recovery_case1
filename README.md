@@ -11,6 +11,8 @@ The investigation focused on understanding how deleted data behaves after:
 - overwrite activity
 
 Analysis was conducted using a forensic disk image acquired from a Windows virtual machine.
+## screenshot
+![Description](screenshots/data1.png)
 
 ---
 

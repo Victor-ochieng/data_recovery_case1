@@ -65,11 +65,7 @@ dcfldd if=/dev/pve/vm-101-disk-0 of=windows.dd hash=sha256 hashlog=hash.txt
 
 SHA256 hashes were generated to verify evidence integrity.
 
-## Screenshot Placeholder
-
-```text
-[Insert Screenshot - SHA256 Hash Verification]
-```
+![PhotoRec Scan Configuration](screenshots/data10.png)
 
 ---
 
@@ -89,17 +85,15 @@ SHA256 hashes were generated to verify evidence integrity.
 
 # 1. Loading the Evidence
 
-The forensic image (`windows.dd`) was loaded into Autopsy for:
+The forensic image (`windows2.dd`) was loaded into Autopsy for:
 - filesystem analysis
 - deleted file recovery
 - timeline reconstruction
 - artifact inspection
 
-## Screenshot Placeholder
+## Screenshot 
 
-```text
-[Insert Screenshot - Autopsy Case Loaded]
-```
+![Description](screenshots/data18.png)
 
 ---
 
@@ -112,17 +106,13 @@ The PNG image was identified as a standard deletion artifact and remained recove
 This demonstrated that:
 - standard deletion preserves recoverability
 - NTFS metadata structures remain intact until overwritten
+  
+![Description](screenshots/data7.png)
+![Description](screenshots/data11.png)
 
 ## Key Finding
 
 The PNG image was recoverable because it was deleted normally rather than permanently removed.
-
-## Screenshot Placeholder
-
-```text
-[Insert Screenshot - Recycle Bin Artifact]
-```
-
 ---
 
 # 3. Permanent Deletion Investigation
@@ -141,9 +131,7 @@ The deleted TXT files became primary recovery targets during carving operations.
 
 ## Screenshot Placeholder
 
-```text
-[Insert Screenshot - Deleted TXT File Entries]
-```
+![PhotoRec Scan Configuration](screenshots/data2.png)
 
 ---
 
@@ -165,11 +153,12 @@ Recovery attempts focused on:
   - png
   - zip
 
-## Screenshot Placeholder
+## Screenshot 
 
-```text
-[Insert Screenshot - PhotoRec Scan Configuration]
-```
+![Description](screenshots/data15.png)
+![Description](screenshots/data16.png)
+![Description](screenshots/data17.png)
+![Description](screenshots/data18.png)
 
 ---
 
@@ -195,9 +184,7 @@ were recovered during the carving process.
 
 ## Screenshot Placeholder
 
-```text
-[Insert Screenshot - PhotoRec Recovery Results]
-```
+![Description](screenshots/data19.png)
 
 ---
 
@@ -210,7 +197,7 @@ After the TXT files were deleted using:
 Shift + Delete
 ```
 
-a large 1GB file was intentionally created within the Windows environment.
+a large 2GB file was intentionally created within the Windows environment.
 
 This likely caused NTFS to reuse previously unallocated clusters that originally contained the deleted TXT data.
 
@@ -228,9 +215,7 @@ This investigation demonstrated that permanent deletion alone does not immediate
 
 The case highlights a critical forensic principle:
 
-```text
-Deleted data remains recoverable only until the underlying storage sectors are reused by new data.
-```
+![Description](screenshots/data6.png)
 
 ---
 
@@ -243,11 +228,9 @@ Recovered TrueType font artifacts confirmed that:
 - unallocated sectors still contained recoverable data
 - selective overwrite had occurred rather than full disk destruction
 
-## Screenshot Placeholder
+## Screenshot
 
-```text
-[Insert Screenshot - Recovered TTF Artifact]
-```
+![Description](screenshots/data18.png)
 
 ---
 

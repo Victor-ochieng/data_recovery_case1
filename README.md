@@ -93,7 +93,7 @@ The forensic image (`windows2.dd`) was loaded into Autopsy for:
 
 ## Screenshot 
 
-![Description](screenshots/data18.png)
+![Description](screenshots/data20.png)
 
 ---
 
